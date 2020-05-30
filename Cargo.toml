@@ -1,0 +1,10 @@
+[package]
+name = "music-theory-swiss-army-knife"
+version = "0.1.0"
+authors = ["Walter Scarborough <walter.scarborough@gmail.com>"]
+edition = "2018"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
