@@ -2,6 +2,8 @@
 pub enum Interval {
     Perfect1,
     Minor2,
+    Major2,
+    Minor3,
     Major3,
     Perfect4,
     Perfect5,
