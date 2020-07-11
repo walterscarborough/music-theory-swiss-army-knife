@@ -23,12 +23,12 @@ fn get_scale_should_return_a_major_scale() {
         aliases: vec![String::from("ionian")],
         intervals: vec![
             Interval::Perfect1,
-            Interval::Minor2,
+            Interval::Major2,
             Interval::Major3,
             Interval::Perfect4,
             Interval::Perfect5,
-            Interval::Minor6,
-            Interval::Minor7,
+            Interval::Major6,
+            Interval::Major7,
         ],
     };
 
