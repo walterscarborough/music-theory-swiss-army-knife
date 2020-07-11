@@ -1,49 +1,5 @@
+use crate::theory_primitive::note::Note;
 use std::collections::HashMap;
-
-#[derive(PartialEq, Debug, Clone, Hash, Eq, Copy)]
-pub enum Note {
-    AFlatFlat,
-    AFlat,
-    A,
-    ASharp,
-    ASharpSharp,
-
-    BFlatFlat,
-    BFlat,
-    B,
-    BSharp,
-    BSharpSharp,
-
-    CFlatFlat,
-    CFlat,
-    C,
-    CSharp,
-    CSharpSharp,
-
-    DFlatFlat,
-    DFlat,
-    D,
-    DSharp,
-    DSharpSharp,
-
-    EFlatFlat,
-    EFlat,
-    E,
-    ESharp,
-    ESharpSharp,
-
-    FFlatFlat,
-    FFlat,
-    F,
-    FSharp,
-    FSharpSharp,
-
-    GFlatFlat,
-    GFlat,
-    G,
-    GSharp,
-    GSharpSharp,
-}
 
 pub fn note_to_string(note: &Note) -> &'static str {
     let note_mappings: HashMap<Note, &str> = [
@@ -82,7 +38,10 @@ pub fn note_to_string(note: &Note) -> &'static str {
         (Note::G, "G"),
         (Note::GSharp, "G♯"),
         (Note::GSharpSharp, "G𝄪"),
-    ].iter().cloned().collect();
+    ]
+    .iter()
+    .cloned()
+    .collect();
 
     note_mappings.get(note).unwrap()
 }

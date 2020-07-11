@@ -1,6 +1,6 @@
-use music_theory_swiss_army_knife::interval::Interval;
-use music_theory_swiss_army_knife::scale;
-use music_theory_swiss_army_knife::scale::Scale;
+use music_theory_swiss_army_knife::conversion::scale;
+use music_theory_swiss_army_knife::theory_primitive::interval::Interval;
+use music_theory_swiss_army_knife::theory_primitive::scale::Scale;
 
 #[test]
 fn get_all_scales_should_return_all_scales() {
