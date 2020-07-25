@@ -1,3 +1,5 @@
+use wasm_bindgen::prelude::*;
+
 use crate::theory_primitive::interval::Interval;
 use crate::theory_primitive::scale::Scale;
 use std::collections::HashMap;
@@ -15,13 +17,20 @@ pub fn get(name: &str) -> Scale {
     scale.clone()
 }
 
+#[wasm_bindgen]
+pub fn get_all_foo() -> String {
+    let scales = get_all();
+
+    scales.first().unwrap().name.to_owned()
+}
+
 pub fn get_all() -> Vec<Scale> {
     let scale_dict = generate_scale_dict();
 
     scale_dict.values().cloned().collect()
 }
 
-fn generate_scale_dict() -> HashMap<String, Scale> {
+pub fn generate_scale_dict() -> HashMap<String, Scale> {
     [
         (
             String::from("major"),

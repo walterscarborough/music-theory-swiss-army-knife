@@ -1,6 +1,6 @@
 use crate::theory_primitive::note::Note;
 
-pub fn note_to_string(note: &Note) -> &'static str {
+pub fn note_to_string(note: &Note) -> &str {
     match note {
         Note::AFlatFlat => "A𝄫",
         Note::AFlat => "A♭",

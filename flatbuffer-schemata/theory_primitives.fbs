@@ -1,5 +1,6 @@
-#[derive(PartialEq, Debug, Clone, Copy)]
-pub enum Interval {
+namespace TheoryPrimitives;
+
+enum Interval: ubyte {
     Perfect1,
     Minor2,
     Major2,
@@ -11,4 +12,10 @@ pub enum Interval {
     Major6,
     Minor7,
     Major7,
+}
+
+table Scale {
+    name: string;
+    aliases: [string];
+    intervals: [Interval];
 }

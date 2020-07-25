@@ -29,7 +29,7 @@ pub fn get_notes_for_intervals(root_note: &Note, intervals: &Vec<Interval>) -> V
     notes_for_scale_degrees
 }
 
-fn note_by_index(index: i32) -> Note {
+pub fn note_by_index(index: i32) -> Note {
     return match index {
         -15 => Note::FFlatFlat,
         -14 => Note::CFlatFlat,
@@ -70,7 +70,7 @@ fn note_by_index(index: i32) -> Note {
     };
 }
 
-fn index_by_note(note: &Note) -> i32 {
+pub fn index_by_note(note: &Note) -> i32 {
     return match note {
         Note::FFlatFlat => -15,
         Note::CFlatFlat => -14,
